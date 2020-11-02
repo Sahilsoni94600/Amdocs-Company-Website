@@ -1,0 +1,1070 @@
+/*
+ * Note, CSS is compiled from Stylus to CSS.
+ */
+/*
+ * Import nib
+ */
+/*
+ * Grab a custom font from Google
+ */
+@import url("http://fonts.googleapis.com/css?family=Quicksand");
+/*
+ * Nib provides a CSS reset
+ */
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  outline: 0;
+  font-weight: inherit;
+  font-style: inherit;
+  font-family: inherit;
+  font-size: 100%;
+  vertical-align: baseline;
+}
+body {
+  line-height: 1;
+  color: #000;
+  background: #fff;
+}
+ol,
+ul {
+  list-style: none;
+}
+table {
+  border-collapse: separate;
+  border-spacing: 0;
+  vertical-align: middle;
+}
+caption,
+th,
+td {
+  text-align: left;
+  font-weight: normal;
+  vertical-align: middle;
+}
+a img {
+  border: none;
+}
+/*
+ * Style selector globally
+ */
+.bar::selection {
+  color: dark-blue;
+  background-color: dark-blue;
+}
+/*
+ * Fonts
+ */
+@font-face {
+  font-family: Helvetica;
+  font-weight: light;
+  src: url("../../fonts/light.otf") format("opentype");
+}
+@font-face {
+  font-family: Helvetica;
+  font-weight: bold;
+  src: url("../../fonts/bold.otf") format("opentype");
+}
+/*
+ * GLOBAL MIXINS
+ */
+/*
+ * GLOBAL COLOR DEFINITIONS
+ */
+/*
+ * SKILL BAR ANIMATIONS
+ *
+ * Bar sliding animations present in the
+ * biography section in the skill list.
+ */
+/*
+ * BUTTON ANIMATIONS
+ *
+ * Button animations throughout the website.
+ */
+/*
+ * IPHONE SCREEN ANIMATION
+ */
+/*
+ * NAVIGATION BAR ANIMATIONS
+ */
+/*
+ * ABSTRACTED BAR
+ *
+ * Generalized bars
+ */
+.bar {
+  width: 100%;
+  min-width: 100%;
+  max-width: 100%;
+}
+.bar .container {
+  margin: 0 auto;
+  width: 980px;
+  min-width: 980px;
+  max-width: 980px;
+}
+.sub-bar {
+  width: 100%;
+  min-width: 100%;
+  max-width: 100%;
+}
+.sub-bar .container {
+  padding-top: 100px;
+  padding-bottom: 100px;
+  margin: 0 auto;
+  width: 920px;
+  min-width: 920px;
+  max-width: 920px;
+}
+/*
+ * HTML5 NAV
+ *
+ * Style the navigation bar
+ */
+nav ul li {
+  display: inline-block;
+}
+/*
+ * BAR ONE
+ * 
+ * Bar one consists of the website's
+ * navigation and title as  well  as
+ * a slider featuring information on
+ * currently  important  events  and
+ * products.
+ */
+.barOne {
+  padding-top: 12px;
+  background-color: #eee;
+  font-family: Helvetica;
+/*
+     * HEADER PANEL
+     * 
+     * Header Panel consists of the
+     * title and the navigation.
+     */
+/*
+     * SLIDER PANEL
+     *
+     * The slider panel and the slides.
+     * Will think of ways to make this
+     * more dynamic in the future.
+     */
+}
+.barOne .headerPanel {
+  font-family: sans-serif;
+  color: #385397;
+}
+.barOne .headerPanel .headerContainer {
+  height: 30px;
+  min-height: 30px;
+  max-height: 30px;
+  zoom: 1;
+/*
+         * NAVIGATION
+         *
+         * The navigation and its elements
+         */
+}
+.barOne .headerPanel .headerContainer:before,
+.barOne .headerPanel .headerContainer:after {
+  content: "";
+  display: table;
+}
+.barOne .headerPanel .headerContainer:after {
+  clear: both;
+}
+.barOne .headerPanel .headerContainer .title {
+  font-family: Helvetica;
+  font-size: 4em;
+  font-weight: bold;
+  float: left;
+  letter-spacing: -0.04em;
+}
+.barOne .headerPanel .headerContainer .title img {
+  width: 250px;
+  min-width: 250px;
+  max-width: 250px;
+}
+.barOne .headerPanel .headerContainer nav {
+  float: right;
+}
+.barOne .headerPanel .headerContainer nav ul li {
+  min-width: 120px;
+  display: block;
+  float: left;
+  line-height: 50px;
+  font-family: Helvetica;
+  font-size: 1.3em;
+  font-weight: light;
+  text-align: center;
+  padding-top: 10px;
+  -webkit-transition: font-size 0.5s, font-weight 0.2s;
+  -moz-transition: font-size 0.5s, font-weight 0.2s;
+  -o-transition: font-size 0.5s, font-weight 0.2s;
+  -ms-transition: font-size 0.5s, font-weight 0.2s;
+  transition: font-size 0.5s, font-weight 0.2s;
+}
+.barOne .headerPanel .headerContainer nav ul li a {
+  text-decoration: none;
+  color: #385397;
+}
+.barOne .headerPanel .headerContainer nav ul li:hover {
+  font-size: 1.7em;
+  cursor: pointer;
+  font-weight: bold;
+}
+.barOne .sliderPanel {
+  padding-top: 120px;
+  padding-bottom: 160px;
+}
+.barOne .sliderPanel .slide_xshot {
+  zoom: 1;
+}
+.barOne .sliderPanel .slide_xshot:before,
+.barOne .sliderPanel .slide_xshot:after {
+  content: "";
+  display: table;
+}
+.barOne .sliderPanel .slide_xshot:after {
+  clear: both;
+}
+.barOne .sliderPanel .slide_xshot img {
+  padding-left: 50px;
+}
+.barOne .sliderPanel .slide_xshot .group {
+  position: relative;
+  width: 300px;
+  min-width: 300px;
+  max-width: 300px;
+  float: right;
+  margin-top: -220px;
+}
+.barOne .sliderPanel .slide_xshot .title h2 {
+  font-size: 7em;
+  font-family: Helvetica;
+  font-weight: light;
+  color: #385397;
+  text-align: center;
+  letter-spacing: -0.04em;
+}
+.barOne .sliderPanel .slide_xshot .download {
+  width: 140px;
+  min-width: 140px;
+  max-width: 140px;
+  height: 25px;
+  min-height: 25px;
+  max-height: 25px;
+  padding: 15px;
+  margin: 0 auto;
+  margin-top: 20px;
+  cursor: pointer;
+  color: #385397;
+  border: 1px solid #385397;
+  border-radius: 5px;
+  -webkit-transition: all 0.3s ease-in-out;
+  -moz-transition: all 0.3s ease-in-out;
+  -o-transition: all 0.3s ease-in-out;
+  -ms-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+}
+.barOne .sliderPanel .slide_xshot .download p {
+  font-size: 1.5em;
+  font-family: Helvetica;
+  font-weight: light;
+  text-align: center;
+}
+.barOne .sliderPanel .slide_xshot .download:hover {
+  background-color: #385397;
+  color: #fff;
+}
+/*
+ * BAR TWO
+ * 
+ * Bar two contains the portfolio
+ * and skill-based information.
+ */
+.barTwo {
+  background-color: #385397;
+}
+.barTwo .bioContainer .bottom {
+  zoom: 1;
+  font-family: Helvetica;
+}
+.barTwo .bioContainer .bottom:before,
+.barTwo .bioContainer .bottom:after {
+  content: "";
+  display: table;
+}
+.barTwo .bioContainer .bottom:after {
+  clear: both;
+}
+.barTwo .bioContainer .bottom .skills {
+  float: right;
+}
+.barTwo .bioContainer .bottom .skills .skillGroup {
+  display: block;
+  padding-bottom: 10px;
+  zoom: 1;
+}
+.barTwo .bioContainer .bottom .skills .skillGroup:before,
+.barTwo .bioContainer .bottom .skills .skillGroup:after {
+  content: "";
+  display: table;
+}
+.barTwo .bioContainer .bottom .skills .skillGroup:after {
+  clear: both;
+}
+.barTwo .bioContainer .bottom .skills .skillGroup .languageContainer {
+  width: 100px;
+  min-width: 100px;
+  max-width: 100px;
+  padding-right: 30px;
+  float: left;
+  zoom: 1;
+}
+.barTwo .bioContainer .bottom .skills .skillGroup .languageContainer:before,
+.barTwo .bioContainer .bottom .skills .skillGroup .languageContainer:after {
+  content: "";
+  display: table;
+}
+.barTwo .bioContainer .bottom .skills .skillGroup .languageContainer:after {
+  clear: both;
+}
+.barTwo .bioContainer .bottom .skills .skillGroup .languageContainer h5 {
+  float: right;
+  font-family: Helvetica;
+  font-weight: bold;
+  color: #fff;
+}
+.barTwo .bioContainer .bottom .skills .skillGroup .levelContainer {
+  float: right;
+  margin-top: 5px;
+  width: 200px;
+  min-width: 200px;
+  max-width: 200px;
+  height: 5px;
+  min-height: 5px;
+  max-height: 5px;
+}
+.barTwo .bioContainer .bottom .skills .skillGroup .levelContainer .levelInner {
+  float: left;
+  height: 5px;
+  min-height: 5px;
+  max-height: 5px;
+  background-color: #849bd4;
+}
+.barTwo .bioContainer .bottom .skills .skillGroup .levelContainer .hundred {
+  -webkit-animation-name: bar-slide-hundred;
+  -moz-animation-name: bar-slide-hundred;
+  -o-animation-name: bar-slide-hundred;
+  -ms-animation-name: bar-slide-hundred;
+  animation-name: bar-slide-hundred;
+  -webkit-animation-timing-function: ease;
+  -moz-animation-timing-function: ease;
+  -o-animation-timing-function: ease;
+  -ms-animation-timing-function: ease;
+  animation-timing-function: ease;
+  -webkit-animation-duration: 3s;
+  -moz-animation-duration: 3s;
+  -o-animation-duration: 3s;
+  -ms-animation-duration: 3s;
+  animation-duration: 3s;
+  -webkit-animation-delay: 0.3s;
+  -moz-animation-delay: 0.3s;
+  -o-animation-delay: 0.3s;
+  -ms-animation-delay: 0.3s;
+  animation-delay: 0.3s;
+  -webkit-animation-fill-mode: forwards;
+  -moz-animation-fill-mode: forwards;
+  -o-animation-fill-mode: forwards;
+  -ms-animation-fill-mode: forwards;
+  animation-fill-mode: forwards;
+}
+.barTwo .bioContainer .bottom .skills .skillGroup .levelContainer .ninety {
+  -webkit-animation-name: bar-slide-ninety;
+  -moz-animation-name: bar-slide-ninety;
+  -o-animation-name: bar-slide-ninety;
+  -ms-animation-name: bar-slide-ninety;
+  animation-name: bar-slide-ninety;
+  -webkit-animation-timing-function: ease;
+  -moz-animation-timing-function: ease;
+  -o-animation-timing-function: ease;
+  -ms-animation-timing-function: ease;
+  animation-timing-function: ease;
+  -webkit-animation-duration: 3s;
+  -moz-animation-duration: 3s;
+  -o-animation-duration: 3s;
+  -ms-animation-duration: 3s;
+  animation-duration: 3s;
+  -webkit-animation-delay: 0.3s;
+  -moz-animation-delay: 0.3s;
+  -o-animation-delay: 0.3s;
+  -ms-animation-delay: 0.3s;
+  animation-delay: 0.3s;
+  -webkit-animation-fill-mode: forwards;
+  -moz-animation-fill-mode: forwards;
+  -o-animation-fill-mode: forwards;
+  -ms-animation-fill-mode: forwards;
+  animation-fill-mode: forwards;
+}
+.barTwo .bioContainer .bottom .skills .skillGroup .levelContainer .eighty {
+  -webkit-animation-name: bar-slide-eighty;
+  -moz-animation-name: bar-slide-eighty;
+  -o-animation-name: bar-slide-eighty;
+  -ms-animation-name: bar-slide-eighty;
+  animation-name: bar-slide-eighty;
+  -webkit-animation-timing-function: ease;
+  -moz-animation-timing-function: ease;
+  -o-animation-timing-function: ease;
+  -ms-animation-timing-function: ease;
+  animation-timing-function: ease;
+  -webkit-animation-duration: 3s;
+  -moz-animation-duration: 3s;
+  -o-animation-duration: 3s;
+  -ms-animation-duration: 3s;
+  animation-duration: 3s;
+  -webkit-animation-delay: 0.3s;
+  -moz-animation-delay: 0.3s;
+  -o-animation-delay: 0.3s;
+  -ms-animation-delay: 0.3s;
+  animation-delay: 0.3s;
+  -webkit-animation-fill-mode: forwards;
+  -moz-animation-fill-mode: forwards;
+  -o-animation-fill-mode: forwards;
+  -ms-animation-fill-mode: forwards;
+  animation-fill-mode: forwards;
+}
+/*
+ * BAR THREE
+ */
+.barThree {
+  background-color: #2a417d;
+}
+.barThree .left {
+  zoom: 1;
+}
+.barThree .left:before,
+.barThree .left:after {
+  content: "";
+  display: table;
+}
+.barThree .left:after {
+  clear: both;
+}
+.barThree .left .indicators {
+  display: block;
+  float: left;
+  clear: both;
+  padding-top: 15px;
+}
+.barThree .left .indicators svg {
+  display: inline-block;
+  width: 20px;
+  min-width: 20px;
+  max-width: 20px;
+  height: 20px;
+  min-height: 20px;
+  max-height: 20px;
+}
+.barThree .left .indicators svg circle {
+  cx: 10;
+  cy: 10;
+  r: 5;
+  fill: #849bd4;
+}
+.barThree .left .indicators svg circle:hover {
+  fill: #385397;
+}
+.barThree .left .phoneContainer {
+  position: relative;
+  width: 0;
+  min-width: 0;
+  max-width: 0;
+  height: 0;
+  min-height: 0;
+  max-height: 0;
+}
+.barThree .left .phoneContainer .img {
+  position: absolute;
+  top: -150px;
+  left: 600px;
+}
+.barThree .left .phoneContainer .phoneScreen {
+  position: absolute;
+  top: -70px;
+  left: 622px;
+  width: 221px;
+  min-width: 221px;
+  max-width: 221px;
+  height: 400px;
+  min-height: 400px;
+  max-height: 400px;
+  background-color: #385397;
+  -webkit-animation-name: color-change;
+  -moz-animation-name: color-change;
+  -o-animation-name: color-change;
+  -ms-animation-name: color-change;
+  animation-name: color-change;
+  -webkit-animation-duration: 1s;
+  -moz-animation-duration: 1s;
+  -o-animation-duration: 1s;
+  -ms-animation-duration: 1s;
+  animation-duration: 1s;
+  -webkit-animation-iteration-count: infinite;
+  -moz-animation-iteration-count: infinite;
+  -o-animation-iteration-count: infinite;
+  -ms-animation-iteration-count: infinite;
+  animation-iteration-count: infinite;
+  -webkit-animation-direction: alternate;
+  -moz-animation-direction: alternate;
+  -o-animation-direction: alternate;
+  -ms-animation-direction: alternate;
+  animation-direction: alternate;
+}
+/*
+ * BAR FOUR
+ */
+.barFour {
+  padding-bottom: 60px;
+  background-color: #385397;
+}
+/*
+ * BAR FIVE
+ *
+ * Bar five consists of a contact area where
+ * the user can contact me in various  ways.
+ * Social media icons will also  be  present
+ * in this area.
+ */
+.barFive {
+  background-color: #2a417d;
+}
+.barFive form {
+  width: 662px;
+  min-width: 662px;
+  max-width: 662px;
+  margin: auto;
+}
+.barFive form .label {
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+.barFive form .label .sec {
+  display: inline-block;
+  vertical-align: middle;
+}
+.barFive form .label .message {
+  width: 120px;
+  min-width: 120px;
+  max-width: 120px;
+  text-align: right;
+  padding-right: 20px;
+  font-family: Helvetica;
+  font-size: 1.3em;
+  color: #fff;
+}
+.barFive form .label input,
+.barFive form .label textarea {
+  padding: 10px;
+  width: 500px;
+  min-width: 500px;
+  max-width: 500px;
+  font-family: Helvetica;
+  font-size: 1.3em;
+  color: #19274b;
+  background-color: #849bd4;
+  border-radius: 5px;
+  border: 1px solid #849bd4;
+  -webkit-transition: all 0.3s ease-in-out;
+  -moz-transition: all 0.3s ease-in-out;
+  -o-transition: all 0.3s ease-in-out;
+  -ms-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+}
+.barFive form .label input:focus,
+.barFive form .label textarea:focus {
+  border-color: #849bd4;
+  background-color: #9dafdd;
+  -webkit-box-shadow: 0px 0px 40px #385397;
+  box-shadow: 0px 0px 40px #385397;
+}
+.barFive form .label textarea {
+  height: 150px;
+  min-height: 150px;
+  max-height: 150px;
+}
+.barFive form .label .submit {
+  float: right;
+}
+.barFive form .label .submit input {
+  width: 200px;
+  min-width: 200px;
+  max-width: 200px;
+  padding: 10px;
+  border-radius: 5px;
+  border: 1px solid #849bd4;
+  -webkit-transition: all 0.3s ease-in-out;
+  -moz-transition: all 0.3s ease-in-out;
+  -o-transition: all 0.3s ease-in-out;
+  -ms-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+}
+.barFive form .label .submit :hover {
+  border-color: #849bd4;
+  background-color: #2a417d;
+  color: #849bd4;
+  -webkit-box-shadow: 0px 0px 40px #385397;
+  box-shadow: 0px 0px 40px #385397;
+}
+/*
+ * GLOBAL PARAGRAPH STYLING
+ */
+.paragraph {
+  display: block;
+  font-family: Helvetica;
+  font-weight: light;
+  float: left;
+  width: 50%;
+  min-width: 50%;
+  max-width: 50%;
+  color: #fff;
+  font-size: 1.3em;
+  font-weight: light;
+  line-height: 1.5em;
+}
+/*
+ * ICON ROW AND ICON
+ *
+ * Automated linked and subtitled icons
+ * and  a  container  to  automatically
+ * align them.
+ */
+.iconRow .iconRowContainer {
+  text-align: center;
+  margin: 0 auto;
+  zoom: 1;
+}
+.iconRow .iconRowContainer:before,
+.iconRow .iconRowContainer:after {
+  content: "";
+  display: table;
+}
+.iconRow .iconRowContainer:after {
+  clear: both;
+}
+.icon .image {
+  display: inline-block;
+}
+.icon .subtitle {
+  display: block;
+}
+.clientIcon {
+  display: inline-block;
+  position: relative;
+  top: 50%;
+  -webkit-transform: translateY(50%);
+  -moz-transform: translateY(50%);
+  -o-transform: translateY(50%);
+  -ms-transform: translateY(50%);
+  transform: translateY(50%);
+}
+.clientIcon:not(:first-child) {
+  padding-left: 75px;
+}
+/*
+ * TITLE STYLES
+ *
+ * Style titles across the  entire  website
+ * Helvetica font. Large white top, smaller
+ * bold bottom with letter spacing and  all
+ * uppercase.
+ */
+.title {
+  font-family: Helvetica;
+}
+.title .sub {
+  padding-bottom: 22px;
+}
+.title .main {
+  color: #fff;
+  font-size: 3em;
+  font-weight: bold;
+}
+.title .subtitle {
+  color: #849bd4;
+  font-size: 1.05em;
+  font-weight: bold;
+  text-transform: uppercase;
+  letter-spacing: 0.2em;
+}
+/*
+ * TINY BUTTON
+ *
+ * The tiny button is a small button
+ * with the same formatting  as  the
+ * subtitles of the titles.
+ */
+.tinyButton {
+  display: inline-block;
+  padding-top: 15px;
+  padding-bottom: 15px;
+  font-family: Helvetica;
+  font-weight: bold;
+  font-size: 0.7em;
+  color: #5172c2;
+  text-transform: uppercase;
+  letter-spacing: 0.2em;
+  text-decoration: none;
+  -webkit-transition: all 0.2s ease-in-out;
+  -moz-transition: all 0.2s ease-in-out;
+  -o-transition: all 0.2s ease-in-out;
+  -ms-transition: all 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out;
+}
+.tinyButton:hover {
+  color: #849bd4;
+}
+/*
+ * ERROR STYLING
+ *
+ * The error message that shows up in
+ * various places in my personal Jade
+ * mixins when something  such  as  a
+ * missing block occurs.
+ */
+.error {
+  display: block;
+  padding: 20px;
+  margin-bottom: 20px;
+  color: #849bd4;
+  font-family: Helvetica;
+  font-size: 1.1em;
+  letter-spacing: 0.05em;
+  line-height: 1.5em;
+  background-color: #2a417d;
+  border: 1px solid #849bd4;
+  border-radius: 5px;
+}
+@-moz-keyframes bar-slide-hundred {
+  from {
+    width: 0;
+    min-width: 0;
+    max-width: 0;
+  }
+  to {
+    width: 100%;
+    min-width: 100%;
+    max-width: 100%;
+  }
+}
+@-webkit-keyframes bar-slide-hundred {
+  from {
+    width: 0;
+    min-width: 0;
+    max-width: 0;
+  }
+  to {
+    width: 100%;
+    min-width: 100%;
+    max-width: 100%;
+  }
+}
+@-o-keyframes bar-slide-hundred {
+  from {
+    width: 0;
+    min-width: 0;
+    max-width: 0;
+  }
+  to {
+    width: 100%;
+    min-width: 100%;
+    max-width: 100%;
+  }
+}
+@keyframes bar-slide-hundred {
+  from {
+    width: 0;
+    min-width: 0;
+    max-width: 0;
+  }
+  to {
+    width: 100%;
+    min-width: 100%;
+    max-width: 100%;
+  }
+}
+@-moz-keyframes bar-slide-ninety {
+  from {
+    width: 0;
+    min-width: 0;
+    max-width: 0;
+  }
+  to {
+    width: 85%;
+    min-width: 85%;
+    max-width: 85%;
+  }
+}
+@-webkit-keyframes bar-slide-ninety {
+  from {
+    width: 0;
+    min-width: 0;
+    max-width: 0;
+  }
+  to {
+    width: 85%;
+    min-width: 85%;
+    max-width: 85%;
+  }
+}
+@-o-keyframes bar-slide-ninety {
+  from {
+    width: 0;
+    min-width: 0;
+    max-width: 0;
+  }
+  to {
+    width: 85%;
+    min-width: 85%;
+    max-width: 85%;
+  }
+}
+@keyframes bar-slide-ninety {
+  from {
+    width: 0;
+    min-width: 0;
+    max-width: 0;
+  }
+  to {
+    width: 85%;
+    min-width: 85%;
+    max-width: 85%;
+  }
+}
+@-moz-keyframes bar-slide-eighty {
+  from {
+    width: 0;
+    min-width: 0;
+    max-width: 0;
+  }
+  to {
+    width: 70%;
+    min-width: 70%;
+    max-width: 70%;
+  }
+}
+@-webkit-keyframes bar-slide-eighty {
+  from {
+    width: 0;
+    min-width: 0;
+    max-width: 0;
+  }
+  to {
+    width: 70%;
+    min-width: 70%;
+    max-width: 70%;
+  }
+}
+@-o-keyframes bar-slide-eighty {
+  from {
+    width: 0;
+    min-width: 0;
+    max-width: 0;
+  }
+  to {
+    width: 70%;
+    min-width: 70%;
+    max-width: 70%;
+  }
+}
+@keyframes bar-slide-eighty {
+  from {
+    width: 0;
+    min-width: 0;
+    max-width: 0;
+  }
+  to {
+    width: 70%;
+    min-width: 70%;
+    max-width: 70%;
+  }
+}
+@-moz-keyframes download-button-fade {
+  from {
+    background-color: #fff;
+    color: #385397;
+  }
+  to {
+    background-color: #385397;
+    color: #fff;
+  }
+}
+@-webkit-keyframes download-button-fade {
+  from {
+    background-color: #fff;
+    color: #385397;
+  }
+  to {
+    background-color: #385397;
+    color: #fff;
+  }
+}
+@-o-keyframes download-button-fade {
+  from {
+    background-color: #fff;
+    color: #385397;
+  }
+  to {
+    background-color: #385397;
+    color: #fff;
+  }
+}
+@keyframes download-button-fade {
+  from {
+    background-color: #fff;
+    color: #385397;
+  }
+  to {
+    background-color: #385397;
+    color: #fff;
+  }
+}
+@-moz-keyframes color-change {
+  from {
+    background-color: #385397;
+  }
+  to {
+    background-color: #263b70;
+  }
+}
+@-webkit-keyframes color-change {
+  from {
+    background-color: #385397;
+  }
+  to {
+    background-color: #263b70;
+  }
+}
+@-o-keyframes color-change {
+  from {
+    background-color: #385397;
+  }
+  to {
+    background-color: #263b70;
+  }
+}
+@keyframes color-change {
+  from {
+    background-color: #385397;
+  }
+  to {
+    background-color: #263b70;
+  }
+}
+@-moz-keyframes nav-button {
+  from {
+    width: 100%;
+    min-width: 100%;
+    max-width: 100%;
+  }
+  to {
+    width: 104%;
+    min-width: 104%;
+    max-width: 104%;
+  }
+}
+@-webkit-keyframes nav-button {
+  from {
+    width: 100%;
+    min-width: 100%;
+    max-width: 100%;
+  }
+  to {
+    width: 104%;
+    min-width: 104%;
+    max-width: 104%;
+  }
+}
+@-o-keyframes nav-button {
+  from {
+    width: 100%;
+    min-width: 100%;
+    max-width: 100%;
+  }
+  to {
+    width: 104%;
+    min-width: 104%;
+    max-width: 104%;
+  }
+}
+@keyframes nav-button {
+  from {
+    width: 100%;
+    min-width: 100%;
+    max-width: 100%;
+  }
+  to {
+    width: 104%;
+    min-width: 104%;
+    max-width: 104%;
+  }
+}

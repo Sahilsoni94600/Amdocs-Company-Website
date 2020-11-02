@@ -1,0 +1,610 @@
+/*
+ * Note, CSS is compiled from Stylus to CSS.
+ */
+
+/*
+ * Import nib
+ */
+@import 'nib'
+
+/*
+ * Grab a custom font from Google
+ */
+@import url('http://fonts.googleapis.com/css?family=Quicksand')
+
+/*
+ * Nib provides a CSS reset
+ */
+global-reset()
+
+/*
+ * Style selector globally
+ */
+ 
+.bar::selection
+  color dark-blue
+  background-color dark-blue
+
+/*
+ * Fonts
+ */
+ 
+@font-face
+  font-family Helvetica
+  font-weight light
+  src url("../../fonts/light.otf") format("opentype")
+  
+@font-face
+  font-family Helvetica
+  font-weight bold
+  src url("../../fonts/bold.otf") format("opentype")
+
+/*
+ * GLOBAL MIXINS
+ */
+ 
+@import "mixins.styl"
+
+/*
+ * GLOBAL COLOR DEFINITIONS
+ */
+
+dark-red    = #800000
+light-red   = #FFB2B2
+
+bg-grey     = #eeeeee
+
+light-blue  = #849bd4
+dark-blue   = #2a417d
+
+third-blue  = #385397
+second-blue = #ccc
+first-blue  = #ccc
+
+/*
+ * SKILL BAR ANIMATIONS
+ *
+ * Bar sliding animations present in the
+ * biography section in the skill list.
+ */
+@keyframes bar-slide-hundred
+  from
+    width(0)
+  to
+    width(100%)
+
+@keyframes bar-slide-ninety
+  from
+    width(0)
+  to
+    width(85%)
+
+@keyframes bar-slide-eighty
+  from
+    width(0)
+  to
+    width(70%)
+
+/*
+ * BUTTON ANIMATIONS
+ *
+ * Button animations throughout the website.
+ */
+@keyframes download-button-fade
+  from
+    background-color white
+    color third-blue
+  to
+    background-color third-blue
+    color white
+    
+
+/*
+ * IPHONE SCREEN ANIMATION
+ */
+ 
+@keyframes color-change
+  from
+    background-color third-blue
+  to
+    background-color darken(dark-blue, 10%)
+ 
+
+/*
+ * NAVIGATION BAR ANIMATIONS
+ */
+
+@keyframes nav-button
+  from
+    width(100%)
+  to
+    width(104%)
+
+/*
+ * ABSTRACTED BAR
+ *
+ * Generalized bars
+ */
+ 
+.bar
+  width 100%
+  
+  .container
+    margin 0 auto
+    width  980px
+
+.sub-bar
+  width 100%
+  
+  .container
+    paddingVertical(100px)
+    margin 0 auto
+    width  920px
+
+/*
+ * HTML5 NAV
+ *
+ * Style the navigation bar
+ */
+
+nav
+  ul
+    li
+      display inline-block
+      
+/*
+ * BAR ONE
+ * 
+ * Bar one consists of the website's
+ * navigation and title as  well  as
+ * a slider featuring information on
+ * currently  important  events  and
+ * products.
+ */
+ .barOne
+    padding-top 12px
+    background-color bg-grey
+    font-family Helvetica
+   
+    /*
+     * HEADER PANEL
+     * 
+     * Header Panel consists of the
+     * title and the navigation.
+     */
+    .headerPanel
+      font-family sans-serif
+      color third-blue
+      
+      .headerContainer
+        height(30px)
+        clearfix()
+     
+        .title
+          font-family Helvetica
+          font-size 4em
+          font-weight bold
+          float left
+          letter-spacing -.04em
+          
+          img 
+            width(250px)
+        
+        /*
+         * NAVIGATION
+         *
+         * The navigation and its elements
+         */
+        nav
+          float right
+          
+          ul li
+            min-width 120px
+            display block
+            float left
+            
+            line-height 50px
+            font-family Helvetica
+            font-size 1.3em
+            font-weight light
+            text-align center
+            
+            padding-top 10px
+            
+            transition: font-size .5s, font-weight .2s
+
+            a
+              text-decoration none
+              color third-blue
+            
+          ul li:hover
+            font-size 1.7em
+            cursor pointer
+            font-weight bold
+            
+    
+    /*
+     * SLIDER PANEL
+     *
+     * The slider panel and the slides.
+     * Will think of ways to make this
+     * more dynamic in the future.
+     */
+    .sliderPanel
+      padding-top 120px
+      padding-bottom 160px
+      
+      .slide_xshot
+        clearfix()
+        
+        img
+          padding-left 50px
+          
+        .group
+            position relative
+            width(300px)
+            float right
+            margin-top -220px
+          
+          .title
+            
+            h2
+              font-size 7em
+              font-family Helvetica
+              font-weight light
+              color third-blue
+              text-align center
+              letter-spacing -.04em
+          
+          .download
+            width(140px)
+            height(25px)
+            padding 15px
+            margin 0 auto
+            margin-top 20px
+            cursor: pointer
+
+            color third-blue
+            border 1px solid third-blue
+            border-radius 5px
+            
+            transition: all 0.3s ease-in-out
+            
+            p
+              font-size 1.5em
+              font-family Helvetica
+              font-weight light
+              text-align center
+            
+          .download:hover
+            background-color third-blue
+            color white
+            
+            
+
+
+/*
+ * BAR TWO
+ * 
+ * Bar two contains the portfolio
+ * and skill-based information.
+ */
+.barTwo
+  background-color third-blue
+  
+  .bioContainer
+        
+    .bottom
+      clearfix()
+      font-family Helvetica
+        
+      .skills
+        float right
+        
+        .skillGroup
+          display block
+          padding-bottom 10px
+          clearfix()
+
+          .languageContainer
+            width(100px)
+            padding-right 30px
+            float left
+            clearfix()
+
+            h5
+              float right
+              font-family Helvetica
+              font-weight bold
+              color white
+            
+          .levelContainer
+            float right
+            margin-top 5px
+            width(200px)
+            height(5px)
+            
+            .levelInner
+              float left
+              height(5px)
+              background-color light-blue
+            
+            .hundred
+              animation-name bar-slide-hundred
+              animationDetails()
+              
+            .ninety
+              animation-name bar-slide-ninety
+              animationDetails()
+              
+            .eighty
+              animation-name bar-slide-eighty
+              animationDetails()
+
+/*
+ * BAR THREE
+ */
+ 
+.barThree
+  background-color dark-blue
+  
+  .left
+    clearfix()
+    
+    .indicators
+      display block
+      float left
+      clear both
+      
+      padding-top 15px
+      
+      svg
+        display inline-block
+        width 20px
+        height 20px
+        
+        circle
+          cx 10
+          cy 10
+          r 5
+          fill light-blue
+          
+        circle:hover
+          fill third-blue
+          
+    .phoneContainer
+      position relative
+      width 0
+      height 0
+      
+      .img
+        position absolute
+        top -150px
+        left 600px
+        
+      .phoneScreen
+        position absolute
+        top -70px
+        left 622px
+        
+        width(221px)
+        height(400px)
+        
+        background-color third-blue
+        
+        animation-name color-change
+        animation-duration 1s
+        animation-iteration-count infinite
+        animation-direction alternate
+
+
+/*
+ * BAR FOUR
+ */
+ 
+.barFour
+  padding-bottom 60px
+  background-color third-blue
+
+/*
+ * BAR FIVE
+ *
+ * Bar five consists of a contact area where
+ * the user can contact me in various  ways.
+ * Social media icons will also  be  present
+ * in this area.
+ */
+ 
+.barFive
+  background-color dark-blue
+  
+  form
+    width(662px)
+    margin auto
+    
+    .label
+      paddingVertical(20px)
+      
+      .sec
+        display inline-block
+        vertical-align middle
+        
+      .message
+        width(120px)
+        text-align right
+        padding-right 20px
+
+        font-family Helvetica
+        font-size 1.3em
+        color white
+        
+      input, textarea
+        padding 10px
+        width(500px)
+      
+        font-family Helvetica
+        font-size 1.3em
+        color darken(dark-blue, 40%)
+        background-color light-blue
+        
+        border-radius 5px
+        border 1px solid light-blue
+        
+        transition: all 0.3s ease-in-out
+        
+      input:focus, textarea:focus
+          border-color light-blue
+          background-color lighten(light-blue, 20%)
+          box-shadow 0px 0px 40px third-blue
+        
+      textarea
+        height(150px)
+        
+      .submit
+        float right
+        
+        input
+          width(200px)
+          padding 10px
+          
+          border-radius 5px
+          border 1px solid light-blue
+          transition: all 0.3s ease-in-out
+        
+        :hover
+          border-color light-blue
+          background-color dark-blue
+          color light-blue
+          box-shadow 0px 0px 40px third-blue
+
+/*
+ * GLOBAL PARAGRAPH STYLING
+ */
+ 
+.paragraph
+  display block
+  
+  font-family Helvetica
+  font-weight light
+
+  float left
+  width 50%
+        
+  color white
+  font-size 1.3em
+  font-weight light
+  line-height 1.5em
+
+/*
+ * ICON ROW AND ICON
+ *
+ * Automated linked and subtitled icons
+ * and  a  container  to  automatically
+ * align them.
+ */
+ 
+.iconRow
+  
+  .iconRowContainer
+    text-align center
+    margin 0 auto
+    clearfix()
+     
+.icon
+  .image
+    display inline-block
+  .subtitle
+    display block
+    
+.clientIcon
+  display inline-block
+  verticalCenter()
+  
+.clientIcon:not(:first-child)
+  padding-left 75px
+
+/*
+ * TITLE STYLES
+ *
+ * Style titles across the  entire  website
+ * Helvetica font. Large white top, smaller
+ * bold bottom with letter spacing and  all
+ * uppercase.
+ */
+
+.title
+  font-family Helvetica
+      
+  .sub
+    padding-bottom 22px
+
+  .main
+    color white
+    font-size 3em
+    font-weight bold
+        
+  .subtitle
+    color light-blue
+    font-size 1.05em
+    font-weight bold
+    text-transform uppercase
+    letter-spacing .2em
+
+/*
+ * TINY BUTTON
+ *
+ * The tiny button is a small button
+ * with the same formatting  as  the
+ * subtitles of the titles.
+ */
+ 
+.tinyButton
+  display inline-block
+  paddingVertical(15px)
+  
+  font-family Helvetica
+  font-weight bold
+  font-size .7em
+  
+  color darken(light-blue, 20%)
+  
+  text-transform uppercase
+  letter-spacing .2em
+  text-decoration none
+  
+  transition: all 0.2s ease-in-out
+
+.tinyButton:hover
+  color light-blue
+
+/*
+ * ERROR STYLING
+ *
+ * The error message that shows up in
+ * various places in my personal Jade
+ * mixins when something  such  as  a
+ * missing block occurs.
+ */
+ 
+// .error
+//   display block
+//   padding 20px
+//   margin-bottom 20px
+//   color dark-red
+//   font-family sans-serif
+//   background-color light-red
+//   border 1px solid dark-red
+//   border-radius 5px
+  
+.error
+  display block
+  padding 20px
+  margin-bottom 20px
+  color light-blue
+  font-family Helvetica
+  font-size 1.1em
+  letter-spacing .05em
+  line-height 1.5em
+  background-color dark-blue
+  border 1px solid light-blue
+  border-radius 5px

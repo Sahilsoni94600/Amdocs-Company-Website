@@ -1,0 +1,122 @@
+include mixins.jade
+
+doctype
+html(lang="en")
+
+head
+    title #{websiteTitle}
+    link(rel='stylesheet', href='/stylesheets/style.css')
+
+body
+
+  +bar().barOne
+
+    div.headerPanel
+      div.headerContainer
+
+        div.title
+          +image("images/amdocs.jpg", 100, 50)
+
+        //- nav
+        //-   +list(linkArray).menuParent
+
+     div.sliderPanel
+      +slider().mainSlider
+
+        +slide().slide_xshot
+          +image("images/xshot.png", 375, 317)
+          div.group
+            div.title
+              h2 xshot
+            div.download
+              p download
+
+        //- +slide().slide_xshot
+        //-   img(src= "images/xshot.png")
+        //-   div.group
+        //-     div.title
+        //-       h2 xshot
+        //-     div.download
+        //-       p download
+
+  +sub-bar().barTwo
+
+    div.bioContainer
+
+      +title("I'm Sahil Soni", subtitle)
+
+      div.bottom
+
+        div.paragraph
+          p #{bio}
+
+        div.skills
+          +skillList(skills)
+
+      +tinyButton("https://www.linkedin.com/in/sahil-soni-0a8b54150/", "More Information...")
+
+  +sub-bar().barThree
+
+    div.servicesContainer
+      
+      +title("Services", "AVAILABLE FOR HIRE")
+
+      div.left
+
+        div.paragraph
+          p #{services[0].content}
+
+        //- div.indicators
+        //-   each val in services
+        //-     svg.svgIndicator
+        //-       circle.indicator
+
+        div.phoneContainer
+          +image("images/iphone.png", 261, 547)
+          //img.phone(src= "images/iphone.png")
+
+          div.phoneScreen
+
+
+  +sub-bar().barFour
+
+    +title("Clients", "Our Happy Customers")
+
+    +iconRow()
+      each val in clients
+        +clientIcon(val.link, val.width, val.height)
+
+  +sub-bar().barFive
+
+    +title("Contact", "Ask Us Anything")
+
+    +error("Note that this contact section is non-functional. This website is currently under construction and is only online to demonstrate my work with HTML/CSS/Node.JS. If you would like to contact me, please contact me at connect.sahilsoni@gmail.com. Thank you.")
+
+    form(action="/contact", method="post")
+      div.label
+          div.sec.message
+            span Name
+          div.sec.input
+            input(type="text" name="Name")
+      br
+
+      div.label
+          div.sec.message
+            span Email
+          div.sec.input
+            input(type="email" name="Email")
+      br
+
+      div.label
+          div.sec.message
+            span.spanArea Message
+          div.sec.input
+            textarea(name="TextArea")
+      br
+
+      div.label
+          div.sec.message
+            span.spanArea 
+          div.sec.submit
+            input(type="submit" name="Submit")
+      br

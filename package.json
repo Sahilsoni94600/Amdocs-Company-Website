@@ -1,0 +1,19 @@
+{
+  "name": "Amdocs",
+  "version": "0.0.1",
+  "description": "Amdocs company website and portfolio",
+  "dependencies": {
+    "body-parser": "^1.12.4",
+    "express": "3.0.0alpha4",
+    "jade": "*",
+    "nib": "*",
+    "stylus": "*"
+  },
+  "author": {
+    "name": "SahilSoni",
+    "email": "connect.sahilsoni@gmail.com",
+    "url": "http://www.amdocs.com/"
+  },
+  "private": false,
+  "main": "server.js"
+}
